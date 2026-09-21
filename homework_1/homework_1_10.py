@@ -6,7 +6,8 @@
 
 
 def unique_number_in_dict(digits_list):
-    for digit in digits_list:
+    set_list = set(digits_list) #привёл к множеству, чтобы уменьшить кол-во итераций для поиска
+    for digit in set_list:
         if digits_list.count(digit) == 1:
             return digit
     return "Уникальное число не найдено. проверь список"
