@@ -7,7 +7,6 @@
 with (open('task_1.txt', 'r', encoding='utf-8') as f_in,
       open('even_numbers.txt', 'w') as f_even,
       open('odd_numbers.txt', 'w') as f_odd):
-
     even_list = []
     odd_list = []
 
