@@ -4,7 +4,7 @@
 Если чисел меньше 3 выводить ошибку.
 """
 with open('task_1.txt', 'r') as f:
-    nmbrs = list(map(int,f.read().split()))
+    nmbrs = list(map(str,f.read().split()))
     print(*nmbrs)
     if len(nmbrs) > 3:
         print(nmbrs[0])
