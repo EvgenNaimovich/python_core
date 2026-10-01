@@ -20,6 +20,7 @@ tests = [
 
 ]
 
+
 def filter_test(test_list):
     failed_tests = list(filter(lambda test: test["status"] == "FAIL", test_list))
     print(f"Список упавших тестов: {failed_tests}")
@@ -30,6 +31,7 @@ def filter_test(test_list):
     name_passed_tests = [test["name"] for test in test_list if test["status"] == "PASS"]
     print(f"Список удачных тестов: {name_passed_tests}")
     return None
+
 
 if __name__ == "__main__":
     print(f"Список для работы: {tests}", sep="\n")

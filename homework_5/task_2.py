@@ -27,15 +27,15 @@ except OSError as e:
 
 else:
     for index, user in enumerate(users, start=1):
-            try:
-                login = user["login"]
-                password = user["password"]
-                expected_result = user["expected_result"]
-            except KeyError as e:
-                print(f"У пользователя №{index}: отсутствует обязательное поле {e}")
-                continue
-            print(
-                f"Пользователь: {login}, "
-                f"пароль: {password}, "
-                f"ожидаемый результат авторизации: {expected_result}"
-            )
+        try:
+            login = user["login"]
+            password = user["password"]
+            expected_result = user["expected_result"]
+        except KeyError as e:
+            print(f"У пользователя №{index}: отсутствует обязательное поле {e}")
+            continue
+        print(
+            f"Пользователь: {login}, "
+            f"пароль: {password}, "
+            f"ожидаемый результат авторизации: {expected_result}"
+        )

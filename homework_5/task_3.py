@@ -8,6 +8,7 @@
 отрицательный таймаут и слишком большое количество повторных запусков
 """
 
+
 def validate_count_tests(number_repeated_tests, timeout):
     if not isinstance(number_repeated_tests, int) or isinstance(number_repeated_tests, bool):
         raise ValueError("Количество повторных запусков должно быть целым числом")
@@ -18,13 +19,12 @@ def validate_count_tests(number_repeated_tests, timeout):
         )
 
     if (
-        not isinstance(timeout, (int, float))
-        or isinstance(timeout, bool)
-        or timeout <= 0
+            not isinstance(timeout, (int, float))
+            or isinstance(timeout, bool)
+            or timeout <= 0
     ):
         raise ValueError("Таймаут должен быть положительным конечным числом.")
     return number_repeated_tests, timeout
-
 
 
 if __name__ == "__main__":
@@ -35,4 +35,3 @@ if __name__ == "__main__":
             print(f"все ок. кол-во вызывов теста {count} таймаут {timeout_value}")
         except ValueError as e:
             print(f"Ошибка в данных: ({count}, {timeout_value}) : {e}")
-
