@@ -32,7 +32,7 @@ else:
                 password = user["password"]
                 expected_result = user["expected_result"]
             except KeyError as e:
-                print(f"У пользака №{index}: отсутствует обязательное поле {e}.")
+                print(f"У пользователя №{index}: отсутствует обязательное поле {e}")
                 continue
             print(
                 f"Пользователь: {login}, "
