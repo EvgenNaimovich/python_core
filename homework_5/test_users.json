@@ -1,0 +1,16 @@
+[
+  {
+    "login": "user_1",
+    "password": "111asd",
+    "expected_result": true
+  },
+  {
+    "login": "user_2",
+    "password": "222asd",
+    "expected_result": false
+  },
+  {
+    "login": "user_3",
+    "expected_result": "asdasd"
+  }
+]
