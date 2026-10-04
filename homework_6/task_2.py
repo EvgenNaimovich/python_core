@@ -6,15 +6,24 @@
 с разными значениями max_time и продемонстрируйте их работу.
 """
 
+import time
+
 
 def create_time_checker(max_time):
-    def time_checker(time):
-        return time < max_time
+    def time_checker(time_work_func):
+        return time_work_func - max_time < 3
 
     return time_checker
 
 
 if __name__ == '__main__':
-    foo = create_time_checker(5)
-    print(f"лимит не привышен" if foo(3) else "лимит привышен")
-    print(f"лимит не привышен" if foo(7) else "лимит привышен")
+    start_time = time.time()
+    foo = create_time_checker(start_time)
+    time.sleep(1)
+    time_true = time.time()
+    print(f"Время ответа операции не привышает SLA(3cек)" if foo(time_true)
+          else "Время ответа операции привышает SLA(3cек)")
+    time.sleep(2.1)
+    time_false = time.time()
+    print(f"Время ответа операции не привышает SLA(3cек)" if foo(time_false)
+          else "Время ответа операции привышает SLA(3cек)")
