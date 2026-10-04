@@ -10,7 +10,7 @@ def start_tests(count_users: int):
     for i in range(1, count_users + 1):
         if i % 5 == 0:
             continue
-        elif i == 19:
+        elif i == 18:
             break
         else:
             print(f"Запущенно тестирование для пользователя {i}")
