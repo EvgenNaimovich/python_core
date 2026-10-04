@@ -6,10 +6,10 @@
 with open('task_1.txt', 'r') as f:
     nmbrs = list(map(str, f.read().split()))
     print(*nmbrs)
-    if len(nmbrs) > 3:
+    if len(nmbrs) >= 3:
         print(nmbrs[0])
         print(nmbrs[1])
-        print(nmbrs[-1])
         print(nmbrs[-2])
+        print(nmbrs[-1])
     else:
         print("Ошибка: в файле меньше трёх чисел")
