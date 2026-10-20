@@ -8,26 +8,27 @@ class Flower(ABC):
         self._lifetime = lifetime
 
     @property
-    def name(self):
+    def get_name(self):
         return self._name
 
     @property
-    def price(self):
+    def get_price_flower(self):
         return self._price
 
     @property
-    def lifetime(self):
+    def get_lifetime(self):
         return self._lifetime
 
 
 class Orchid(Flower):
-    def __init__(self, price=30, lifetime=10):
-        super().__init__("Орхидея", price, lifetime)
+    def __init__(self, name, price=30, lifetime=10):
+        super().__init__(name, price, lifetime)
 
 
 class Rose(Flower):
-    def __init__(self, price=10, lifetime=7):
+    def __init__(self, color: str, price=10, lifetime=7):
         super().__init__("Роза", price, lifetime)
+        self.color = color
 
 
 class Alstroemeria(Flower):
@@ -36,20 +37,11 @@ class Alstroemeria(Flower):
 
 
 class Hydrangea(Flower):
-    def __init__(self, price=10, lifetime=15):
+    def __init__(self, color, price=10, lifetime=15):
         super().__init__("Гортензия", price, lifetime)
+        self.color = color
 
 
 class Gypsophila(Flower):
     def __init__(self, price=7, lifetime=12):
         super().__init__("Гипсофила", price, lifetime)
-
-
-class Lisianthus(Flower):
-    def __init__(self, price=22, lifetime=9):
-        super().__init__("Лизиантус", price, lifetime)
-
-
-class Eustoma(Flower):
-    def __init__(self, price=23.7, lifetime=22):
-        super().__init__("Эустома", price, lifetime)
